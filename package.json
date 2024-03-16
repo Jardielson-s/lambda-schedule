@@ -1,0 +1,39 @@
+{
+  "name": "lambda-schedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --config ./vitest.config.ts --coverage",
+    "start": "node dist/infra/aws/lambda/handler.js",
+    "build:tsc": "rimraf ./dist && tsc && tsc-alias",
+    "build:layer": "rimraf ./layers && mkdir layers && cp package.json layers"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.136",
+    "@types/node": "^20.11.27",
+    "@types/uuid": "^9.0.8",
+    "@vitest/coverage-istanbul": "^1.3.1",
+    "@vitest/coverage-v8": "^1.3.1",
+    "esbuild": "^0.20.2",
+    "esbuild-plugin-tsc": "^0.4.0",
+    "rimraf": "^5.0.5",
+    "ts-loader": "^9.5.1",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.4.2",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.3.1",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.535.0",
+    "@aws-sdk/client-s3": "^3.535.0",
+    "@aws-sdk/lib-dynamodb": "^3.535.0",
+    "aws-lambda": "^1.0.7",
+    "uuid": "^9.0.1"
+  }
+}

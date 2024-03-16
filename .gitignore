@@ -1,0 +1,12 @@
+.env
+.export.env
+node_modules/
+dist/
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/lambda-handler.zip
+.infracost/
+coverage
+terraform/lambda-handler.zip
+terraform/lambda-layers.zip
+layers/
